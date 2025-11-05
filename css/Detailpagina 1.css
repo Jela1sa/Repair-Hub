@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Nunito:wght@500;600;700&display=swap');
+
+:root{
+    --primary-color: #2563EB ;
+    --secondary-color-1: #EAF3FC;
+    --secondary-color-2: #000000;
+    --accent-color-1: #22C55E;
+    --accent-color-2: #F97316;
+    --accent-color-3: #14B8A6;
+    --neutral-light: #FFFFFF;
+    --neutral-grey: #3b3b3b;
+    --neutral-dark: #1e3a8a;
+}
+
+
+
 body
 {
-    background-color: #EAF3FC;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    background-color: var(--secondary-color-1);
+    color: var(--secondary-color-2);
+    margin: 0;
+    padding: 0;
 }
