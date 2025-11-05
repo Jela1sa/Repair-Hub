@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Nunito:wght@500;600;700&display=swap');
 
 :root{
-    --primary-color: #2563EB ;
+    --primary-color: #2563EB;
     --secondary-color-1: #EAF3FC;
     --secondary-color-2: #000000;
     --accent-color-1: #22C55E;
@@ -12,17 +12,26 @@
     --neutral-dark: #1e3a8a;
 }
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    line-height: 1.4;
+    line-height: 1.32;
     background-color: var(--secondary-color-1);
     color: var(--secondary-color-2);
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; 
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 header {
     display: flex;
@@ -30,30 +39,264 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     height: 100px;
-    padding: 0;
+    padding: 0 40px; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
 }
 
 header nav a {
-   font-family: 'Nunito', sans-serif;
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 24px;
-   color: var(--neutral-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--neutral-light);
     text-decoration: none;
     margin-right: 25px;
 }
 
-header figure {
-    margin: 0;
-    padding: 0;
+header nav a:last-child {
+    margin-right: 0;
 }
 
 header figure img {
-   width: 234px;
+    width: 234px;
     height: 100px;
     display: block;
-    margin-right: -10px;
+    object-fit: contain;
+    margin-right: 0; 
 }
+.intro {
+    background-color: var(--secondary-color-1);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.intro h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.intro + figure {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0; 
+}
+
+.intro + figure img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.zoekbalk {
+    background-color: var(--neutral-light);
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.zoekbalk h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 25px;
+}
+
+.zoekbalk form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zoekbalk label {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+}
+
+.zoekbalk input[type="text"] {
+    padding: 12px 15px;
+    font-size: 20px;
+    border: 2px solid var(--neutral-grey);
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+.zoekbalk fieldset {
+    border: 1px solid var(--neutral-grey);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.zoekbalk legend {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.zoekbalk input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.zoekbalk button {
+    width: 200px;
+    padding: 12px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zoekbalk button:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-2px);
+}
+
+
+.winkelsinfo {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.winkelsinfo h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.winkelsinfo article {
+    background-color: var(--secondary-color-1);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.winkelsinfo article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.winkelsinfo h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--neutral-dark);
+    margin-bottom: 15px;
+}
+
+.winkelsinfo p {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--secondary-color-2);
+    margin-bottom: 8px;
+}
+
+.winkelsinfo a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    padding: 10px 25px;
+    border-radius: 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.winkelsinfo a:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-2px);
+}
+
+.winkelsinfo figure {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.winkelsinfo figure img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+
+
+.extra {
+    padding: 60px 40px;
+    background-color: var(--secondary-color-1);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.extra p {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.extra a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    padding: 15px 40px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.extra a:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-3px);
+}
+
+
 
 footer {
     background-color: var(--primary-color);
@@ -76,8 +319,8 @@ footer h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    margin-bottom: 8px;
     color: var(--neutral-light);
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -94,7 +337,11 @@ footer section p {
     font-size: 20px;
     line-height: 24px;
     color: var(--secondary-color-2); 
-    margin: 0;
+}
+
+footer section a {
+    color: var(--secondary-color-2); 
+    text-decoration: none;
 }
 
 footer .contact {
@@ -145,7 +392,6 @@ footer ul li a:hover {
 footer .faq-link:hover {
     text-decoration: underline;
 }
-
 
 footer .copyright {
     flex: 0 0 100%; 

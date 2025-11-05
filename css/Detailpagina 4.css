@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Nunito:wght@500;600;700&display=swap');
 
 :root{
-    --primary-color: #2563EB ;
+    --primary-color: #2563EB;
     --secondary-color-1: #EAF3FC;
     --secondary-color-2: #000000;
     --accent-color-1: #22C55E;
@@ -12,17 +12,26 @@
     --neutral-dark: #1e3a8a;
 }
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    line-height: 1.4;
+    line-height: 1.32;
     background-color: var(--secondary-color-1);
     color: var(--secondary-color-2);
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; 
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 header {
     display: flex;
@@ -30,30 +39,262 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     height: 100px;
-    padding: 0;
+    padding: 0 40px; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
 }
 
 header nav a {
-   font-family: 'Nunito', sans-serif;
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 24px;
-   color: var(--neutral-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--neutral-light);
     text-decoration: none;
     margin-right: 25px;
 }
 
-header figure {
-    margin: 0;
-    padding: 0;
+header nav a:last-child {
+    margin-right: 0;
 }
 
 header figure img {
-   width: 234px;
+    width: 234px;
     height: 100px;
     display: block;
-    margin-right: -10px;
+    object-fit: contain;
+    margin-right: 0; 
 }
+.intro {
+    background-color: var(--secondary-color-1);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.intro h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.check {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.check figure {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color-1);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.check figure img {
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.check aside {
+    flex: 1 1 50%;
+    background-color: var(--secondary-color-1);
+    padding: 30px;
+    border-radius: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+}
+
+.check aside h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--neutral-dark);
+    margin-bottom: 15px;
+}
+
+.check aside p {
+    margin-bottom: 10px;
+}
+
+.stappenplan {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stappenplan h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 10px;
+}
+
+.stappenplan h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.stappenplan ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 0;
+    counter-reset: step;
+}
+
+.stappenplan ol li {
+    position: relative;
+    background-color: var(--secondary-color-1); 
+    color: var(--secondary-color-2); 
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    padding: 20px 25px 20px 60px;
+    border-radius: 12px;
+    flex: 1 1 45%;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.stappenplan ol li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-color);
+    background-color: var(--accent-color-3);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+}
+
+.stap-afbeeldingen {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.stap-afbeeldingen img {
+    width: 48%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.tipswaar {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tipswaar h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tipswaar h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 15px;
+}
+
+.tipswaar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.tipswaar li {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+    background-color: var(--secondary-color-1);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.intro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+
+.extra {
+    padding: 60px 40px;
+    background-color: var(--secondary-color-1);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.extra p {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.extra a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    padding: 15px 40px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.extra a:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-3px);
+}
+
+
 
 footer {
     background-color: var(--primary-color);
@@ -76,8 +317,8 @@ footer h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    margin-bottom: 8px;
     color: var(--neutral-light);
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -94,7 +335,11 @@ footer section p {
     font-size: 20px;
     line-height: 24px;
     color: var(--secondary-color-2); 
-    margin: 0;
+}
+
+footer section a {
+    color: var(--secondary-color-2); 
+    text-decoration: none;
 }
 
 footer .contact {
@@ -145,7 +390,6 @@ footer ul li a:hover {
 footer .faq-link:hover {
     text-decoration: underline;
 }
-
 
 footer .copyright {
     flex: 0 0 100%; 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Nunito:wght@500;600;700&display=swap');
 
 :root{
-    --primary-color: #2563EB ;
+    --primary-color: #2563EB;
     --secondary-color-1: #EAF3FC;
     --secondary-color-2: #000000;
     --accent-color-1: #22C55E;
@@ -12,17 +12,26 @@
     --neutral-dark: #1e3a8a;
 }
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    line-height: 1.4;
+    line-height: 1.32;
     background-color: var(--secondary-color-1);
     color: var(--secondary-color-2);
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; 
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 header {
     display: flex;
@@ -30,29 +39,514 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     height: 100px;
-    padding: 0;
+    padding: 0 40px; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
 }
 
 header nav a {
-   font-family: 'Nunito', sans-serif;
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 24px;
-   color: var(--neutral-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--neutral-light);
     text-decoration: none;
     margin-right: 25px;
 }
 
-header figure {
-    margin: 0;
-    padding: 0;
+header nav a:last-child {
+    margin-right: 0;
 }
 
 header figure img {
-   width: 234px;
+    width: 234px;
     height: 100px;
     display: block;
-    margin-right: -10px;
+    object-fit: contain;
+    margin-right: 0; 
+}
+
+.intro {
+    background-color: var(--secondary-color-1);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.intro h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+
+
+
+.winkel {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.winkel h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.winkel p {
+    background-color: var(--neutral-light);
+    color: var(--secondary-color-2);
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.winkel figure {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    background-color: var(--secondary-color-2);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.winkel figure img {
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+.winkelinfo {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.winkelinfo h2 {
+    flex: 1 1 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+}
+
+.winkelinfo article {
+    flex: 1 1 60%;
+}
+
+.winkelinfo p,
+.winkelinfo ul {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--secondary-color-2);
+    margin-bottom: 15px;
+}
+
+.winkelinfo ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.winkelinfo li::before {
+    content: "• ";
+    color: var(--accent-color-1);
+}
+
+.winkelinfo figure {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.winkelinfo figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: var(--secondary-color-1);
+}
+
+.diensten {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.diensten h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.diensten-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.diensten article {
+    flex: 1 1 48%;
+}
+
+.diensten table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: var(--neutral-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.diensten th {
+    background-color: var(--secondary-color-1);
+    color: var(--neutral-dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--neutral-grey);
+}
+
+.diensten td {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--secondary-color-1);
+}
+
+.diensten tr:last-child td {
+    border-bottom: none;
+}
+
+.diensten tr:hover td {
+    background-color: var(--neutral-grey);
+}
+
+
+.Tip {
+    background-color: var(--accent-color-3);
+    color: var(--neutral-light);
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 25px 20px;
+    margin: 0 auto;
+}
+
+
+.beschrijving {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.beschrijving p {
+    flex: 1 1 60%;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--secondary-color-2);
+}
+
+.beschrijving figure {
+    flex: 1 1 35%;
+}
+
+.beschrijving figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: var(--secondary-color-1);
+}
+
+.beschrijving p {
+    flex: 1 1 60%;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--secondary-color-2);
+}
+
+.beschrijving figure {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.beschrijving figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: var(--secondary-color-1);
+}
+
+.prijzen {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prijzen h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.prijzen article {
+    background-color: var(--secondary-color-1);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.prijzen h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.prijzen table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: var(--neutral-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.prijzen th {
+    background-color: var(--secondary-color-1);
+    color: var(--neutral-dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--neutral-grey);
+}
+
+.prijzen td {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--secondary-color-1);
+}
+
+.prijzen tr:last-child td {
+    border-bottom: none;
+}
+
+.prijzen tr:hover td {
+    background-color: var(--neutral-grey);
+}
+
+
+.prijzen figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--secondary-color-1);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.prijzen figure img {
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.duurzaam {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.duurzaam h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.duurzaam p {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--secondary-color-2);
+    background-color: var(--secondary-color-1);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+
+.garantie {
+    background-color: var(--neutral-light);
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.garantie h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+}
+
+.garantie ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+    background-color: var(--secondary-color-1);
+    border-radius: 12px;
+    padding: 30px 50px;
+}
+
+.garantie li {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: var(--secondary-color-2);
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.garantie li::before {
+    content: "✔️";
+    color: var(--accent-color-1);
+    margin-right: 10px;
+}
+
+
+
+.reviews {
+    padding: 60px 40px;
+    background-color: var(--neutral-light);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviews h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+}
+
+.reviews p {
+    background-color: var(--secondary-color-1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--neutral-dark);
+}
+
+
+.reviews p span.stars {
+    color: var(--accent-color-1);
+    margin-right: 10px;
+}
+
+
+.extra {
+    padding: 60px 40px;
+    background-color: var(--secondary-color-1);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.extra p {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+}
+
+.extra a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    padding: 15px 40px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.extra a:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-3px);
 }
 
 footer {
@@ -76,8 +570,8 @@ footer h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    margin-bottom: 8px;
     color: var(--neutral-light);
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -94,7 +588,11 @@ footer section p {
     font-size: 20px;
     line-height: 24px;
     color: var(--secondary-color-2); 
-    margin: 0;
+}
+
+footer section a {
+    color: var(--secondary-color-2); 
+    text-decoration: none;
 }
 
 footer .contact {
@@ -145,7 +643,6 @@ footer ul li a:hover {
 footer .faq-link:hover {
     text-decoration: underline;
 }
-
 
 footer .copyright {
     flex: 0 0 100%; 

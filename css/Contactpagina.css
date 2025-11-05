@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Nunito:wght@500;600;700&display=swap');
 
 :root{
-    --primary-color: #2563EB ;
+    --primary-color: #2563EB;
     --secondary-color-1: #EAF3FC;
     --secondary-color-2: #000000;
     --accent-color-1: #22C55E;
@@ -12,17 +12,26 @@
     --neutral-dark: #1e3a8a;
 }
 
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    line-height: 1.4;
+    line-height: 1.32;
     background-color: var(--secondary-color-1);
     color: var(--secondary-color-2);
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; 
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 header {
     display: flex;
@@ -30,30 +39,297 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     height: 100px;
-    padding: 0;
+    padding: 0 40px; 
+}
+
+header nav {
+    display: flex;
+    align-items: center;
 }
 
 header nav a {
-   font-family: 'Nunito', sans-serif;
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 24px;
-   color: var(--neutral-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--neutral-light);
     text-decoration: none;
     margin-right: 25px;
 }
 
-header figure {
-    margin: 0;
-    padding: 0;
+header nav a:last-child {
+    margin-right: 0;
 }
 
 header figure img {
-   width: 234px;
+    width: 234px;
     height: 100px;
     display: block;
-    margin-right: -10px;
+    object-fit: contain;
+    margin-right: 0; 
 }
+
+.Banner {
+    position: relative;
+    text-align: center;
+    color: var(--secondary-color-2);
+    background-color: var(--secondary-color-1);
+    width: 100%; 
+    margin: 0;
+    padding: 100px 20px;
+}
+
+.Banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Banner h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Nunito', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--secondary-color-2);
+}
+
+.Banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    color: var(--secondary-color-2);
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: var(--secondary-color-1);
+}
+
+
+.form, .info {
+    background-color: var(--neutral-light);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form {
+    width: 100%;
+    max-width: 600px; 
+    background-color: var(--neutral-light);
+    border-radius: 16px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.form h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 42px; 
+    color: var(--neutral-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form p {
+    margin-bottom: 25px;
+}
+
+.form label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 22px; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 16px 18px; 
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    outline: none;
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 150px; 
+}
+
+.form button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--neutral-light);
+    background-color: var(--accent-color-1);
+    padding: 18px 50px; 
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.form button:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-3px);
+}
+
+.info h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--neutral-dark);
+    margin-top: 20px;
+}
+
+.info p, .info ul li {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+    margin-bottom: 10px;
+}
+
+.info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info ul li::before {
+    content: "• ";
+    color: var(--accent-color-1);
+}
+
+
+.een figure {
+    text-align: center;
+}
+
+.een figure img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.faq {
+    background-color: var(--neutral-light);
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--neutral-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--neutral-dark);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: var(--secondary-color-2);
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.faq p::before {
+    content: "→ ";
+    color: var(--accent-color-1);
+}
+
+
+main .form-info-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+main .form-info-container .form,
+main .form-info-container .info {
+    flex: 1 1 48%;
+}
+
+
+@media (max-width: 900px) {
+    main .form-info-container {
+        flex-direction: column;
+    }
+    
+    .form, .info {
+        width: 100%;
+    }
+
+    .Banner h1 {
+        font-size: 40px;
+    }
+
+    .Banner p {
+        font-size: 22px;
+    }
+    
+    .form label, .form input, .form textarea, .form button {
+        font-size: 18px;
+    }
+
+    .info h3 {
+        font-size: 24px;
+    }
+
+    .faq h2 {
+        font-size: 28px;
+    }
+
+    .faq h3 {
+        font-size: 22px;
+    }
+
+    .faq p {
+        font-size: 20px;
+    }
+}
+
+
 
 footer {
     background-color: var(--primary-color);
@@ -76,8 +352,8 @@ footer h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    margin-bottom: 8px;
     color: var(--neutral-light);
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -94,7 +370,11 @@ footer section p {
     font-size: 20px;
     line-height: 24px;
     color: var(--secondary-color-2); 
-    margin: 0;
+}
+
+footer section a {
+    color: var(--secondary-color-2); 
+    text-decoration: none;
 }
 
 footer .contact {
@@ -145,7 +425,6 @@ footer ul li a:hover {
 footer .faq-link:hover {
     text-decoration: underline;
 }
-
 
 footer .copyright {
     flex: 0 0 100%; 
